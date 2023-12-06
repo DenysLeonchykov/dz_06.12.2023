@@ -10,6 +10,7 @@ const blokAll = 600
 rightBtn.addEventListener('click', () => {
     left+= 10;
     div.style.left = `${left}px`;
+    leftBtn.disabled = false;
     if (blokAll - left < 200) {
         rightBtn.setAttribute('disabled', '');
     }
@@ -18,6 +19,7 @@ rightBtn.addEventListener('click', () => {
 leftBtn.addEventListener('click', () => {
     left-= 10;
     div.style.left = `${left}px`;
+    rightBtn.disabled = false;
     if (left === 0) {
         leftBtn.setAttribute('disabled', '');
     }
